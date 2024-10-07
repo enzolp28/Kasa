@@ -3,6 +3,7 @@ import './App.scss'
 import Header from '@/composants/header.jsx'
 import Cart from './composants/cart.jsx'
 import logements from '@/data/logements.json'
+import Footer from '@/composants/footer.jsx'
 
 
 
@@ -19,6 +20,7 @@ function Home() {
             ))}
           </div>
         </div>
+      <Footer />  
     </>
   )
 }
