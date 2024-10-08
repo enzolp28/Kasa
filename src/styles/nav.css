@@ -13,6 +13,11 @@
     height: 68px;
 }
 
+.nav__logo img {
+    width: 100%;
+    height: 100%;
+}
+
 
 .nav__links ul {
     display: flex;
@@ -34,4 +39,24 @@
 
 .nav__links ul li a:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .nav {
+        padding: 10px; 
+    }
+
+    .nav__logo {
+        width: 145px; 
+        height: 45px;
+    }
+
+    .nav__links ul {
+        gap: 15px; /* Réduire encore l'espace entre les éléments */
+        font-size: 16px; /* Réduire davantage la taille de la police */
+    }
+
+    .nav__links ul li a {
+        margin-right: 5px; /* Réduire la marge entre les liens */
+    }
 }
