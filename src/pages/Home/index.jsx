@@ -14,13 +14,13 @@ function Home() {
   return (
     <>
       <Header />
-        <div className="body">
+      <div className="body">
           <div className="carts-display">
             {logements.map((logement) => (
               <Cart key={logement.id} titre={logement.title} image={logement.cover} url={logement.id}/>
             ))}
           </div>
-        </div>
+      </div>
       <Footer />  
     </>
   )

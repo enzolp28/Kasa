@@ -5,7 +5,7 @@ export default function Header() {
     return (
         <div>
             <Nav />
-            <Baniere />
+            <Baniere titre="Chez vous, partout et ailleurs" className="baniere" />
         </div>
     )
 }

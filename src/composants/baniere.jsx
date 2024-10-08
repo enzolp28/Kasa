@@ -1,11 +1,11 @@
 import '../styles/baniere.css';
 
 
-export default function Baniere() {
+export default function Baniere({titre, className}) {
     return (
         <div className="baniere__container">
-            <div className="baniere">
-                <h1 className="baniere__title">Chez vous, partout et ailleurs</h1>
+            <div className={className} >
+                <h1 className="baniere__title">{titre}</h1>
             </div>
         </div>
     )
