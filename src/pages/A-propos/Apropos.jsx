@@ -8,10 +8,13 @@ export default function Apropos() {
     return (
         <>
             <Nav />
-            <Baniere className="apropos" />
-            <Menu titre="Fiabilité" />
-            <Menu titre="Respect" />
-            <Menu titre="Service" />
+            <div className="main-apropos">
+                <Baniere className="apropos" />
+                <Menu titre="Fiabilité" />
+                <Menu titre="Respect" />
+                <Menu titre="Service" />
+            </div>
+
             <Footer />
         </>
     )
