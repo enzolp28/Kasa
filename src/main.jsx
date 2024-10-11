@@ -1,14 +1,15 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import Home from './pages/Home'
-import Apropos from './pages/A-propos/Apropos'
-import Error from './pages/Error/error.jsx'
+import { router } from './router.jsx'
+import { RouterProvider } from 'react-router-dom'
 import './index.scss'
+
+
+
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/* { <Home /> } */}
-    {/* <Error /> */}
-    { <Apropos /> }
+    <RouterProvider router={router} />
   </StrictMode>,
 )

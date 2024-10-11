@@ -7,15 +7,12 @@ import Menu from '../../composants/menu';
 export default function Apropos() {
     return (
         <>
-            <Nav />
             <div className="main-apropos">
                 <Baniere className="apropos" />
                 <Menu titre="Fiabilité" />
                 <Menu titre="Respect" />
                 <Menu titre="Service" />
             </div>
-
-            <Footer />
         </>
     )
 }

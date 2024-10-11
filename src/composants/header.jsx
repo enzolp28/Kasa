@@ -4,7 +4,6 @@ import Baniere from './baniere.jsx';
 export default function Header() {
     return (
         <div>
-            <Nav />
             <Baniere titre="Chez vous, partout et ailleurs" className="baniere" />
         </div>
     )

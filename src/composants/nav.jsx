@@ -1,5 +1,6 @@
+import { NavLink } from 'react-router-dom';
 import logo from '../assets/logo.svg';
-import '../styles/nav.css';
+import '../styles/nav.scss';
 
 export default function Nav() {
     return (
@@ -10,10 +11,10 @@ export default function Nav() {
             <div className="nav__links">
                 <ul>
                     <li>
-                        <a href="#">Accueil</a>
+                        <NavLink to="/">Accueil</NavLink>
                     </li>
                     <li>
-                        <a href="#">À Propos</a>
+                        <NavLink to="/apropos">A propos</NavLink>
                     </li>
                 </ul>
             </div>
