@@ -2,7 +2,6 @@ import Arrow from '@/assets/arrow.svg'
 import '../styles/menu.scss'
 import { useState } from 'react'
 
-
 export default function Menu({ titre }) {
 
     const [open, setOpen] = useState(false)

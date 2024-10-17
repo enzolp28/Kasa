@@ -1,0 +1,9 @@
+.tag {
+    padding: 10px 50px;
+    background: #FF6060;
+    color: white;
+    border-radius: 35px;
+    &:hover {
+        cursor: pointer;
+    }
+}
