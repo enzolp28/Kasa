@@ -1,0 +1,44 @@
+.fiche-logement {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+    .carroussel {
+        width: 90%;
+        height: auto;
+        background-size: cover;
+        background-position: center;
+
+        img {
+            width: 100%;
+            height: 415px;
+            object-fit: cover;
+        }
+    }
+
+    .description-container {
+        width: 90%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+
+        .description {
+            width: 50%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+        }
+    }
+
+}

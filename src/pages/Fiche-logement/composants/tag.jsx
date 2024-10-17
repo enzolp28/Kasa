@@ -1,8 +1,8 @@
 import "./tag.scss"
-export default function Tag() {
+export default function Tag({content}) {
   return (
     <div className="tag">
-        <p>Lorem, ipsum.</p>
+        <p>{content}</p>
     </div>
   )
 }
