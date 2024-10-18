@@ -6,6 +6,7 @@
     align-items: center;
     gap: 40px;
 
+
     .carroussel {
         width: 90%;
         height: auto;
@@ -16,6 +17,7 @@
             width: 100%;
             height: 415px;
             object-fit: cover;
+            border-radius: 25px;
         }
     }
 
@@ -31,12 +33,60 @@
             height: auto;
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            align-items: start;
+            gap: 10px;
+            font-family: Montserrat;
+            color: #FF6060;
+
+            h1 {
+                font-size: 36px;
+                font-weight: 500;
+                line-height: 51.34px;
+            }
+
+            h3 {
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 25.67px;
+            }
 
             .tags {
                 display: flex;
                 flex-wrap: wrap;
                 gap: 10px;
+            }
+        }
+
+        .equipement {
+            width: 50%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            gap: 20px;
+
+            .host {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                width: min-content;
+                text-align: end;
+
+                h3 {
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 25.67px;
+                    color: #FF6060;
+                }
+
+
+                img {
+                    width: 64px;
+                    height: 64px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
             }
         }
     }

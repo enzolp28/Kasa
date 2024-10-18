@@ -10,6 +10,9 @@ export default function FicheLogement() {
   const { id } = useParams()
   const logement = data.find((logement) => logement.id === id)
 
+  console.log(logement.host.name);
+  
+
   if (!logement) {
     return <Error />
   }
@@ -31,10 +34,10 @@ export default function FicheLogement() {
                 <Menu />
             </div>
             <div className="equipement">
-              <p>nom</p>
-              <p>etoile</p>
-              <p>etoile</p>
-              <p>etoile</p>
+              <div className="host">
+                <h3>{logement.host.name}</h3>
+                <img src={logement.host.picture} alt={logement.host.name} />
+              </div>
 
 
             </div>
