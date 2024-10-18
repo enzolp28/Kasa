@@ -1,5 +1,4 @@
 import { useNavigate, useParams } from "react-router-dom"
-import data from "@/data/logements.json"
 import './ficheLogement.scss'
 import Tag from "./composants/tag.jsx"
 import Menu from "@/composants/menu.jsx"
@@ -12,15 +11,29 @@ export default function FicheLogement() {
   const { id } = useParams()
   const navigate = useNavigate()
   useEffect(() => {
-    const logementEncour = data.find((logement) => logement.id === id)
-  
-    if (!logementEncour) {
-      navigate("/404")
-      return
-    }
+    async function fetchData() {
+      try {
+      const response = await fetch("/data/logements.json")
+      console.log(response);
+      
+      const data = await response.json()
+      console.log(data);
+      
 
-    setLogement(logementEncour)
-    
+      const logementEncour = data.find((logement) => logement.id === id)
+
+      if (!logementEncour) {
+        navigate("/404")
+        return
+      }
+
+      setLogement(logementEncour)
+
+    } catch (error) {
+      console.error(error)
+    }
+  }
+    fetchData()
   }, [])
 
   if (!logement) {
