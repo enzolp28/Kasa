@@ -1,6 +1,4 @@
-import Nav from '@/composants/nav.jsx';
-import Footer from '@/composants/footer.jsx';
-import '@/pages/error/error.scss';
+import './error.scss';
 
 export default function Error() {
     return (

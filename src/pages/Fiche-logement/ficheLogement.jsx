@@ -1,21 +1,30 @@
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import data from "@/data/logements.json"
-import Error from "../Error/error"
 import './ficheLogement.scss'
 import Tag from "./composants/tag.jsx"
 import Menu from "@/composants/menu.jsx"
 import Rating from "./composants/rating.jsx"
+import { useEffect, useState } from "react"
 
 export default function FicheLogement() {
 
+  const [logement, setLogement] = useState(null)
   const { id } = useParams()
-  const logement = data.find((logement) => logement.id === id)
+  const navigate = useNavigate()
+  useEffect(() => {
+    const logementEncour = data.find((logement) => logement.id === id)
+  
+    if (!logementEncour) {
+      navigate("/404")
+      return
+    }
 
-  console.log(logement.host.name);
-
+    setLogement(logementEncour)
+    
+  }, [])
 
   if (!logement) {
-    return <Error />
+    return <div>Loading...</div>
   }
 
   return (
