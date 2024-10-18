@@ -65,7 +65,7 @@
             align-items: end;
             gap: 20px;
 
-            .host {
+            .info {
                 display: flex;
                 align-items: center;
                 gap: 10px;
@@ -87,6 +87,17 @@
                     object-fit: cover;
                 }
 
+                
+            }
+            .rating {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
             }
         }
     }

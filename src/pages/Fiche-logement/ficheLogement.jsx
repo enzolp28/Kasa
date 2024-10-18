@@ -1,9 +1,10 @@
 import { useParams } from "react-router-dom"
-import data from "../../data/logements.json"
+import data from "@/data/logements.json"
 import Error from "../Error/error"
 import './ficheLogement.scss'
 import Tag from "./composants/tag.jsx"
-import Menu from "../../composants/menu.jsx"
+import Menu from "@/composants/menu.jsx"
+import Rating from "./composants/rating.jsx"
 
 export default function FicheLogement() {
 
@@ -11,7 +12,7 @@ export default function FicheLogement() {
   const logement = data.find((logement) => logement.id === id)
 
   console.log(logement.host.name);
-  
+
 
   if (!logement) {
     return <Error />
@@ -19,30 +20,33 @@ export default function FicheLogement() {
 
   return (
     <div className="fiche-logement">
-        <div className="carroussel">
-          <img src={logement.cover} alt="" />
+      <div className="carroussel">
+        <img src={logement.cover} alt="" />
+      </div>
+      <div className="description-container">
+        <div className="description">
+          <h1>{logement.title}</h1>
+          <h3>{logement.location}</h3>
+          <div className="tags">
+            {logement.tags.map((tag, index) => (
+              <Tag key={index} content={tag} />
+            ))}
+          </div>
+          <Menu />
         </div>
-        <div className="description-container">
-            <div className="description">
-                <h1>{logement.title}</h1>
-                <h3>{logement.location}</h3>
-                <div className="tags">
-                  {logement.tags.map((tag) => (
-                     <Tag content={tag} />
-                  ))}
-                </div>
-                <Menu />
+        <div className="equipement">
+          <div className="host">
+            <div className="info">
+              <h3>{logement.host.name}</h3>
+              <img src={logement.host.picture} alt={logement.host.name} />
             </div>
-            <div className="equipement">
-              <div className="host">
-                <h3>{logement.host.name}</h3>
-                <img src={logement.host.picture} alt={logement.host.name} />
-              </div>
+            <Rating note={logement.rating} />
+          </div>
 
-
-            </div>
 
         </div>
+
+      </div>
     </div>
   )
 }
