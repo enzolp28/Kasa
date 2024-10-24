@@ -54,7 +54,7 @@ export default function FicheLogement() {
               <Tag key={index} content={tag} />
             ))}
           </div>
-          <Menu />
+          <Menu titre="Description" decription={logement.description} />
         </div>
         <div className="equipement">
           <div className="host">
@@ -63,6 +63,7 @@ export default function FicheLogement() {
               <img src={logement.host.picture} alt={logement.host.name} />
             </div>
             <Rating note={logement.rating} />
+            <Menu titre="Équipements" decription={logement.equipments.join(", ")} />
           </div>
 
 

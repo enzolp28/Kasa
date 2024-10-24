@@ -30,10 +30,12 @@
 
         .description {
             width: 50%;
+            height: 100%;
             height: auto;
             display: flex;
             flex-direction: column;
             align-items: start;
+            justify-content: space-between;
             gap: 10px;
             font-family: Montserrat;
             color: #FF6060;
@@ -55,6 +57,14 @@
                 flex-wrap: wrap;
                 gap: 10px;
             }
+
+            .menu-container {
+                align-items: start;
+
+                .menu-header {
+                    width: 90%;
+                }
+            }
         }
 
         .equipement {
@@ -64,6 +74,16 @@
             flex-direction: column;
             align-items: end;
             gap: 20px;
+
+            .host {
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+                justify-content: space-between;
+                width: 100%;
+                height: 100%;
+                gap: 20px;
+            }
 
             .info {
                 display: flex;
@@ -86,8 +106,16 @@
                     border-radius: 50%;
                     object-fit: cover;
                 }
-
                 
+                
+                
+            }
+            .menu-container {
+                align-items: end;
+
+                .menu-header {
+                    width:90%;
+                }
             }
             .rating {
                 display: flex;

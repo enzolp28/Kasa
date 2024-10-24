@@ -8,15 +8,16 @@ export default function Menu({ titre, decription }) {
     const contentRef = useRef(null);
 
     return (
-        <div className={`menu-container ${open ? 'open' : ''}`} >
-            <div className="menu-header" onClick={() => setOpen(!open)}>
-                <h3 className='menu__title'>{titre}</h3>
-                <img className="menu__arrow" src={Arrow} alt="flèche menu" />
+        <>
+            <div className={`menu-container ${open ? 'open' : ''}`} >
+                <div className="menu-header" onClick={() => setOpen(!open)}>
+                    <h3 className='menu__title'>{titre}</h3>
+                    <img className="menu__arrow" src={Arrow} alt="flèche menu" />
+                </div>
+                <div className="menu-content" ref={contentRef} style={{ maxHeight: open ? contentRef.current.scrollHeight : 0 }}>
+                    <p>{decription}</p>
+                </div>
             </div>
-            <div className="menu-content" ref={contentRef} style={{ maxHeight: open ? contentRef.current.scrollHeight : 0 }}>
-                <p>{decription}</p>
-            </div>
-
-        </div>
+        </>
     )
 }
