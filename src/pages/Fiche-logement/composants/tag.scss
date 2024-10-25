@@ -3,10 +3,14 @@
     padding: 10px 50px;
     background: #FF6060;
     color: white;
-    border-radius: 15px;
+    border-radius: 10px;
     font-weight: 600;
     width: fit-content;
-    // &:hover {
-    //     cursor: pointer;
-    // }
+
+    @media screen and (max-width: 425px) {
+        padding: 5px 20px;
+        font-size: 12px;
+        margin-top: 10px;
+
+    }
 }

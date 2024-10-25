@@ -17,4 +17,19 @@
         margin: auto;
     }
 
+    @media screen and (max-width: 425px) {
+        .container {
+            width: 90%;
+            margin: auto;
+
+            .menu-container {
+                width: 100%;
+                gap: 10px;
+            }
+        }
+
+
+
+    }
+
 }

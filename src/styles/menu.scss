@@ -18,6 +18,10 @@
         padding: 15px;
         z-index: 2;
 
+        &:hover {
+            cursor: pointer;
+        }
+
         .menu__title {
             font-family: 'Montserrat';
             font-style: normal;
@@ -67,5 +71,29 @@
             transform: rotate(180deg);
 
         }
+    }
+
+    @media screen and (max-width: 425px) {
+        margin: 0;
+
+        .menu-header {
+            padding: 5px 10px;
+
+            .menu__title {
+                font-size: 14px;
+            }
+
+            .menu__arrow {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        .menu-content {
+            p {
+                font-size: 15px;
+            }
+        }
+
     }
 }
