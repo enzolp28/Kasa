@@ -1,4 +1,4 @@
-import '../styles/baniere.css';
+import '../styles/baniere.scss';
 
 
 export default function Baniere({titre, className}) {
