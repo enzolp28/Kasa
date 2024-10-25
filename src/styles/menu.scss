@@ -1,5 +1,4 @@
 .menu-container {
-
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -7,13 +6,13 @@
     width: 100%;
     margin-top: 10px;
     margin-bottom: 15px;
+    min-width: 335px;
 
     .menu-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 75%;
-        height: 100%;
+        width: 100%;
         background: #FF6060;
         border-radius: 5px;
         padding: 15px;
@@ -37,8 +36,7 @@
 
     .menu-content {
         background-color: #f6f6f6;
-        width: 75%;
-        height: auto;
+        width: 100%;
         border-radius: 5px;
         margin-bottom: 10px;
         max-height: 0;

@@ -14,26 +14,26 @@ export default function FicheLogement() {
   useEffect(() => {
     async function fetchData() {
       try {
-      const response = await fetch("/data/logements.json")
-      console.log(response);
-      
-      const data = await response.json()
-      console.log(data);
-      
+        const response = await fetch("/data/logements.json")
+        console.log(response);
 
-      const logementEncour = data.find((logement) => logement.id === id)
+        const data = await response.json()
+        console.log(data);
 
-      if (!logementEncour) {
-        navigate("/404")
-        return
+
+        const logementEncour = data.find((logement) => logement.id === id)
+
+        if (!logementEncour) {
+          navigate("/404")
+          return
+        }
+
+        setLogement(logementEncour)
+
+      } catch (error) {
+        console.error(error)
       }
-
-      setLogement(logementEncour)
-
-    } catch (error) {
-      console.error(error)
     }
-  }
     fetchData()
   }, [])
 
@@ -44,7 +44,7 @@ export default function FicheLogement() {
   return (
     <div className="fiche-logement">
       <div className="carroussel">
-        <Carroussel image={logement.cover} alt={logement.title} data={logement.pictures}/>
+        <Carroussel image={logement.cover} alt={logement.title} data={logement.pictures} />
       </div>
       <div className="description-container">
         <div className="description">
@@ -55,7 +55,7 @@ export default function FicheLogement() {
               <Tag key={index} content={tag} />
             ))}
           </div>
-          <Menu titre="Description" decription={logement.description} />
+
         </div>
         <div className="equipement">
           <div className="host">
@@ -64,12 +64,16 @@ export default function FicheLogement() {
               <img src={logement.host.picture} alt={logement.host.name} />
             </div>
             <Rating note={logement.rating} />
-            <Menu titre="Équipements" decription={logement.equipments.join(", ")} />
+
           </div>
 
 
         </div>
 
+      </div>
+      <div className="collapses-container">
+        <Menu titre="Description" decription={logement.description} />
+        <Menu titre="Équipements" decription={logement.equipments.join(", ")} />
       </div>
     </div>
   )

@@ -7,7 +7,6 @@ export default function carrousel({ alt, data}) {
 
   const [currentSlide, setCurrentSlide] = useState(0)
 
-  console.log(data[currentSlide]);
   
 
   function nextSlide() {
@@ -32,8 +31,16 @@ export default function carrousel({ alt, data}) {
     <div>
 
         <img className="carroussel__image" src={data[currentSlide]} alt={alt} />
-        <img className="carrousel__arrow-left" src={arrowLeft} alt="fleche gauche" onClick={prevSlide}/>
-        <img className="carrousel__arrow-right" src={arrowRight} alt="fleche droite" onClick={nextSlide} />
-    </div>
+        
+        { data.length > 1 ? <>
+          <img className="carrousel__arrow-left" src={arrowLeft} alt="fleche gauche" onClick={prevSlide}/>
+          <img className="carrousel__arrow-right" src={arrowRight} alt="fleche droite" onClick={nextSlide} />
+        
+        </> : ""
+          
+
+        }
+
+    </div>  
   )
 }
