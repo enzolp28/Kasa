@@ -1,4 +1,4 @@
-import '@/styles/cart.css';
+import '@/styles/cart.scss';
 import { Link } from 'react-router-dom';
 
 export default function Cart({titre, image, url}) {
