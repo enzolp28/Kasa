@@ -3,6 +3,7 @@ import './ficheLogement.scss'
 import Tag from "./composants/tag.jsx"
 import Menu from "@/composants/menu.jsx"
 import Rating from "./composants/rating.jsx"
+import Carroussel from "@/pages/Fiche-logement/composants/carrousel.jsx"
 import { useEffect, useState } from "react"
 
 export default function FicheLogement() {
@@ -43,12 +44,12 @@ export default function FicheLogement() {
   return (
     <div className="fiche-logement">
       <div className="carroussel">
-        <img src={logement.cover} alt="" />
+        <Carroussel image={logement.cover} alt={logement.title} data={logement.pictures}/>
       </div>
       <div className="description-container">
         <div className="description">
           <h1>{logement.title}</h1>
-          <h3>{logement.location}</h3>
+          <h2>{logement.location}</h2>
           <div className="tags">
             {logement.tags.map((tag, index) => (
               <Tag key={index} content={tag} />

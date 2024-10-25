@@ -12,8 +12,9 @@
         height: auto;
         background-size: cover;
         background-position: center;
+        position: relative;
 
-        img {
+        .carroussel__image {
             width: 100%;
             height: 415px;
             object-fit: cover;
@@ -46,11 +47,13 @@
                 line-height: 51.34px;
             }
 
-            h3 {
+            h2 {
                 font-size: 18px;
                 font-weight: 500;
                 line-height: 25.67px;
+                color: #000;
             }
+
 
             .tags {
                 display: flex;
@@ -123,8 +126,8 @@
                 gap: 5px;
 
                 img {
-                    width: 20px;
-                    height: 20px;
+                    width: 30px;
+                    height: 30px;
                 }
             }
         }

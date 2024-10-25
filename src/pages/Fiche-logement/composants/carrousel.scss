@@ -1,0 +1,25 @@
+.carrousel__arrow-right, .carrousel__arrow-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+    width: 46.68px;
+    height: 79.2px;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
+}
+
+.carrousel__arrow-left {
+    left: 30px;
+}
+
+.carrousel__arrow-right {
+    right: 30px;
+}
