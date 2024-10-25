@@ -2,13 +2,14 @@ $color_1: #333;
 $font-family_1: Montserrat;
 
 @import "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap";
+
 .nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 30px 60px;
 
-	@media (max-width: 700px) {
+	@media (max-width: 430px) {
 		padding: 10px;
 	}
 }
@@ -21,11 +22,13 @@ $font-family_1: Montserrat;
 		width: 145px;
 		height: 45px;
 	}
+
 	img {
 		width: 100%;
 		height: 100%;
 	}
 }
+
 .nav__links {
 	ul {
 		display: flex;
@@ -40,18 +43,25 @@ $font-family_1: Montserrat;
 			gap: 15px;
 			font-size: 16px;
 		}
+
+		@media (max-width: 430px) {
+			gap: 5px;
+		}
+
 		li {
 			a {
 				font-family: $font-family_1;
 				margin-right: 20px;
 				text-decoration: none;
 				color: $color_1;
+
 				&:hover {
 					text-decoration: underline;
 				}
-                &.active {
-                    text-decoration: underline;
-                }
+
+				&.active {
+					text-decoration: underline;
+				}
 
 				@media (max-width: 700px) {
 					margin-right: 5px;
