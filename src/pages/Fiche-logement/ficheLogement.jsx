@@ -73,7 +73,7 @@ export default function FicheLogement() {
       </div>
       <div className="collapses-container">
         <Menu titre="Description" decription={logement.description} />
-        <Menu titre="Équipements" decription={logement.equipments.join(", ")} />
+        <Menu titre="Équipements" decription={logement.equipments.map((equipment, index) => <span key={index}>{equipment}<br /></span>)} />
       </div>
     </div>
   )
