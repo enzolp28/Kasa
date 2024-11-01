@@ -1,4 +1,4 @@
-import './App.scss'
+import './home.scss'
 import Header from '@/composants/header.jsx'
 import Cart from './composants/cart.jsx'
 import { useEffect, useState } from 'react'
@@ -17,8 +17,8 @@ function Home() {
         console.error(error)
       }
     }
-      fetchData()
-    }, [])
+    fetchData()
+  }, [])
 
   return (
     <>
